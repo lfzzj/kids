@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    tools:context="com.hamitao.kids.activity.EditScheduleActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <include
+        layout="@layout/common_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_confirm"
+        android:layout_below="@id/title_bar"
+        android:visibility="visible" />
+
+
+<!--    <ExpandableListView
+        android:id="@+id/expandlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_confirm"
+        android:layout_below="@id/title_bar"></ExpandableListView>-->
+
+    <TextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_primary_shape"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_default" />
+
+</RelativeLayout>

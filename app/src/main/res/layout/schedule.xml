@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/titlebar_click_selector"
+            android:drawableLeft="@drawable/icon_back"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:text="课程设置"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_14"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_tv"
+            android:gravity="center" />
+
+        <View style="@style/v_schedule_divider" />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/textSize_12" />
+
+        <View style="@style/v_schedule_divider" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/textSize_12" />
+
+        <View style="@style/v_schedule_divider" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/textSize_12" />
+
+        <View style="@style/v_schedule_divider" />
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/textSize_12" />
+
+        <View style="@style/v_schedule_divider" />
+
+        <TextView
+            android:id="@+id/tv_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/textSize_12" />
+
+        <View style="@style/v_schedule_divider" />
+
+        <TextView
+            android:id="@+id/tv_6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/textSize_12" />
+
+        <View style="@style/v_schedule_divider" />
+
+        <TextView
+            android:id="@+id/tv_7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/textSize_12" />
+
+    </LinearLayout>
+
+    <View style="@style/h_divider" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />z
+
+</LinearLayout>

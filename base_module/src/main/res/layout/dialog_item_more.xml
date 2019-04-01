@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    android:paddingTop="13dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_collect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/icon_dialog_collect"
+            android:gravity="center"
+            android:text="收藏到..."
+            android:textColor="@color/text_default_l"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_put"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/icon_dialog_put"
+            android:gravity="center"
+            android:text="投送到机器人"
+            android:textColor="@color/text_default_l"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/icon_dialog_share"
+            android:gravity="center"
+            android:text="分享到广场"
+            android:textColor="@color/text_default_l"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_nfc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/icon_dialog_nfc"
+            android:gravity="center"
+            android:text="制卡"
+            android:textColor="@color/text_default_l"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/dialog_list_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/icon_dialog_add"
+            android:gravity="center"
+            android:text="加入课表"
+            android:textColor="@color/text_default_l"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:drawableTop="@drawable/icon_dialog_delete"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/text_default_l"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/h_divider"
+        android:layout_marginTop="13dp" />
+
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:text="关闭"
+        android:textColor="@color/text_default_d"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

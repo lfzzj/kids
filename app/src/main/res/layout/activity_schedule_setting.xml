@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.ScheduleSettingActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_schedule_pause"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="课表推送"
+            android:textColor="@color/text_default_d" />
+
+        <ImageView
+            android:id="@+id/switch_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:checked="false"
+            android:src="@drawable/switch_selector" />
+
+        <View
+            style="@style/h_divider_gray"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_schedule_time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="课表推送时间"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_schedule_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right" />
+
+    </RelativeLayout>
+
+
+    <View
+        style="@style/h_divider_gray"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tv_schedule_manage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableRight="@drawable/icon_arrow_right"
+        android:gravity="center_vertical"
+        android:text="课表推送"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+
+    <View
+        style="@style/h_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tv_schedule_share"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableRight="@drawable/icon_arrow_right"
+        android:gravity="center_vertical"
+        android:text="分享到广场"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+
+    <View
+        style="@style/h_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/tv_schedule_clean"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableRight="@drawable/icon_arrow_right"
+        android:gravity="center_vertical"
+        android:text="清空课表"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+
+    <View
+        style="@style/h_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+
+</LinearLayout>

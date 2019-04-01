@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+
+    <TextView
+        android:id="@+id/tv_cycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/tv_lable"
+        android:autoSizeTextType="uniform"
+        android:text=""
+        android:textSize="@dimen/textSize_14" />
+
+    <TextView
+        android:id="@+id/tv_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_time"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_time"
+        android:autoSizeTextType="uniform"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textSize="@dimen/textSize_14" />
+
+
+    <ImageView
+        android:id="@+id/iv_isopen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_switch_n" />
+
+    <View
+        style="@style/h_divider"
+        android:layout_below="@id/tv_cycle"
+        android:layout_marginTop="5dp" />
+
+
+</RelativeLayout>

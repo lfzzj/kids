@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/item_longclicked_viewImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="查看图片"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/item_longclicked_saveImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="保存图片"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

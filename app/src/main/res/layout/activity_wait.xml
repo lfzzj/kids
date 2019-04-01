@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_wait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_chat_video"
+    tools:context="com.hamitao.kids.activity.WaitActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_face"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_device_logo" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="小淘同学"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_24" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/tv_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="等待对方接受邀请..."
+            android:textColor="@color/text_default_l"
+            android:textSize="@dimen/textSize_16" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:paddingBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/tv_refuse"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/icon_refuse"
+            android:gravity="center"
+            android:text="挂断"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_accept"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/icon_accept"
+            android:gravity="center"
+            android:src="@drawable/app_logo"
+            android:text="接听"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/default_cover" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/ll"
+        android:layout_toRightOf="@id/iv_icon"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:paddingBottom="2.0dp"
+        android:paddingTop="2.0dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fadingEdge="horizontal"
+            android:maxLines="1"
+            android:text="上标题"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_14" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:fadingEdge="horizontal"
+            android:maxLines="1"
+            android:text="下标题"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent"
+            android:textColor="@color/text_default_d_p"
+            android:textSize="@dimen/textSize_12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="10.0dp">
+
+        <ImageView
+            android:id="@+id/iv_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/ic_status_bar_pause_light_selector" />
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:paddingLeft="5dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_status_bar_next_light_selector" />
+    </LinearLayout>
+
+
+</RelativeLayout>

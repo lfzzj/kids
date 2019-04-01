@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_push"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@drawable/item_click_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="新消息通知"
+
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <ImageView
+            android:id="@+id/switch_push"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/switch_selector" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_checkVersion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@drawable/item_click_selector"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="检查新版本"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_checkVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:checked="false"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+    <View
+        style="@style/h_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_cleanCache"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@drawable/item_click_selector"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_hight"
+            android:gravity="center_vertical"
+            android:text="清除缓存"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right" />
+
+    </RelativeLayout>
+
+
+    <View style="@style/h_divider_gray" />
+
+    <TextView
+        android:id="@+id/rl_about"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@drawable/item_click_selector"
+        android:drawableRight="@drawable/icon_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="关于"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+    <View
+        style="@style/h_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/rl_feedBack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@drawable/item_click_selector"
+        android:drawableRight="@drawable/icon_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="使用反馈"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+    <View
+        style="@style/h_divider"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+
+</LinearLayout>

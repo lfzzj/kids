@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.BindNfcActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_state"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/title_bar"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/tv_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="已绑定"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_nfcId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorPrimary" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/rl_state"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:visibility="visible">
+
+        <com.hamitao.base_module.customview.RoundCornerImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/tv_cover"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/default_cover"
+            android:text="已绑定" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_cover"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/tv_cover"
+            android:text=""
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_descrpiption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_cover"
+            android:layout_alignLeft="@id/tv_title"
+            android:text=""
+            android:textColor="@color/text_default_l"
+            android:textSize="@dimen/textSize_12" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_bind"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/btn_primary_shape"
+        android:gravity="center"
+        android:text="更换绑定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_16"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dialog的样式 -->
+    <style name="DialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--评论条弹窗样式-->
+    <style name="Comment_Dialog" parent="@style/AppTheme" type="text/css">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="ApplicationTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarSize">50dp</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- android:windowIsTranslucent 应用启动没有白屏,相当于整个主题的背景都是透明的,-->
+        <!--  但是StartActivity不要有太耗时的操作,甚至是不要有操作,尤其是在onCreate里面 -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <!--文字阴影效果-->
+    <style name="OverlayText">
+        <item name="android:shadowColor">#80000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionBarSize">50dp</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.DesignDemo" parent="AppTheme">
+        <item name="android:windowBackground">@color/activity_background</item>
+    </style>
+
+    <style name="nonTitleAnimFade" parent="android:Theme.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/AnimFade</item>
+    </style>
+
+    <style name="AnimFade" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/hold</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="Animation1" parent="android:Animation">
+
+        <!-- 从相对位置 从下拉效果进入 然后返回 -->
+        <item name="android:windowEnterAnimation">@anim/pop_up_to_down_enter</item>
+        <item name="android:windowExitAnimation">@anim/pop_down_to_up_exit</item>
+    </style>
+    <!-- 水平分隔虚线 -->
+    <style name="h_dotted_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layerType">software</item>
+        <item name="android:background">@drawable/line_dotted</item>
+    </style>
+    <!-- 水平分隔线 -->
+    <style name="h_divider">
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+    <!-- 垂直分隔线 -->
+    <style name="v_divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <!-- 课程表垂直分隔线 -->
+    <style name="v_schedule_divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <!-- 垂直分隔线 -->
+    <style name="v_divider_white_bg">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@color/white_bg_divider</item>
+    </style>
+    <!-- 水平分隔线 -->
+    <style name="h_divider_white_bg">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/white_bg_divider</item>
+    </style>
+
+    <!--浅灰分割线-->
+    <style name="h_divider_light_gray">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <!--灰色5dp分割线-->
+    <style name="h_divider_gray">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">5dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="popup_up_to_down" parent="android:Animation">
+
+        <!-- 从相对位置 从下拉效果进入 然后返回 -->
+        <item name="android:windowEnterAnimation">@anim/pop_up_to_down_enter</item>
+        <item name="android:windowExitAnimation">@anim/pop_down_to_up_exit</item>
+    </style>
+
+    <style name="popup_down_to_up" parent="android:Animation">
+
+        <!-- 从相对位置 从上拉效果进入 然后返回 -->
+        <item name="android:windowEnterAnimation">@anim/pop_down_to_up_enter</item>
+        <item name="android:windowExitAnimation">@anim/pop_up_to_down_exit</item>
+    </style>
+</resources>

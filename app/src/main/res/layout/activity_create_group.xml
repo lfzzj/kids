@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.CreateGroupActivity">
+
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:textSize="@dimen/textSize_16"
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="群聊名称" />
+
+        <EditText
+            android:textSize="@dimen/textSize_16"
+            android:hint="不超过10个字符"
+            android:id="@+id/et_groupName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv"
+            android:background="@null" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/divider"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:text="绑定的机器人"
+        android:textColor="@color/text_default_l"
+        android:textSize="@dimen/textSize_14" />
+
+    <include layout="@layout/common_recyclerview" />
+
+</LinearLayout>

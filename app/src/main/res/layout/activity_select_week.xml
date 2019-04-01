@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.SelectWeekActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="每周日" />
+
+        <CheckBox
+            android:id="@+id/cb7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:drawableRight="@drawable/cb_check_selector"
+            android:padding="8dp" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="每周一" />
+
+        <CheckBox
+            android:id="@+id/cb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:drawableRight="@drawable/cb_check_selector"
+            android:padding="8dp" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="每周二" />
+
+        <CheckBox
+            android:id="@+id/cb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:drawableRight="@drawable/cb_check_selector"
+            android:padding="8dp" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="每周三" />
+
+        <CheckBox
+            android:id="@+id/cb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:drawableRight="@drawable/cb_check_selector"
+            android:padding="8dp" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="每周四" />
+
+        <CheckBox
+            android:id="@+id/cb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:drawableRight="@drawable/cb_check_selector"
+            android:padding="8dp" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="每周五" />
+
+        <CheckBox
+            android:id="@+id/cb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:drawableRight="@drawable/cb_check_selector"
+            android:padding="8dp" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="每周六" />
+
+        <CheckBox
+            android:id="@+id/cb6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:drawableRight="@drawable/cb_check_selector"
+            android:padding="8dp" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hamitao.kids">
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 文件读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <!--8.0版本弹出安装器-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+
+    <!--<uses-permission android:name="android.permission.BLUETOOTH" />-->
+
+    <!--打电话-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <!--阿里云-->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <application
+        android:name="com.hamitao.base_module.base.BaseApplication"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 多渠道打包 -->
+        <meta-data
+            android:name="channel"
+            android:value="tencent" />
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!--极光-->
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="${applicationId}.DataProvider"
+            android:exported="true"
+            tools:replace="android:exported" />
+
+        <!-- 极光推送自定义消息接收器 -->
+        <receiver
+            android:name=".receiver.JpushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <action android:name="com.hamitao.kids.broadcast.P2P_VIDEO" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 另一个动态消息 -->
+        <receiver android:name="com.hamitao.base_module.jpush.MyJpushMessageReceiver">
+            <intent-filter>
+                <action android:name="android.intent.cation.GET_PUSH_MESSAGE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace"></service>
+
+        <service android:name=".player.PlayService" />
+
+
+        <!--4.4版本要注册这个接收器，否则会崩溃-->
+        <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 通知栏的音乐条 -->
+        <receiver android:name=".player.StatusBarReceiver">
+            <intent-filter>
+                <action android:name="com.hamitao.kids.STATUS_BAR_ACTIONS" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- 拔出耳机时暂停音乐的广播 -->
+        <receiver android:name=".receiver.NoisyAudioStreamReceiver" />
+
+        <activity
+            android:name=".activity.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WelcomeStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <activity
+            android:name=".activity.SearchActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".activity.LocationActivity"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:name=".activity.MusicListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".activity.WifiConnectActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+
+        <activity
+            android:name=".video.P2PVideoActivity"
+            android:keepScreenOn="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".videoplayer.VideoPlayActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PushMsgActivity"
+            android:label="@string/title_activity_push_msg"
+            android:theme="@style/AppTheme" />
+
+
+        <!-- <activity android:name=".activity.WifiListActivity" /> -->
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.SortActivity" />
+        <activity android:name=".activity.SmartTreeActivity" />
+        <activity android:name=".activity.UserInfoActivity" />
+        <activity android:name=".activity.MachineActivity" />
+        <activity android:name=".activity.MyScheduleActivity" />
+        <activity android:name=".activity.MakeCardActivity" />
+        <activity android:name=".activity.CollectActivity" />
+        <activity android:name=".activity.MyRecordActivity" />
+        <activity android:name=".activity.ScanActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.RecordActivity" />
+        <activity android:name=".activity.RecentPlayActivity" />
+        <activity android:name=".activity.CourseDetailActivity" />
+        <activity android:name=".activity.BindAccountActivity" />
+        <activity android:name=".activity.DeviceRecordActivity" />
+        <activity android:name=".activity.CreateCodeActivity" />
+        <activity android:name=".activity.CreateGroupActivity" />
+        <activity android:name=".activity.CollectContentActivity" />
+        <activity android:name=".activity.AddCourseActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.EditScheduleActivity" />
+        <activity android:name=".activity.CreateScheduleActivity" />
+        <activity android:name=".activity.NewScheduleInfoActivity" />
+        <activity android:name=".activity.AlarmActivity" />
+        <activity android:name=".activity.AddAlarmActivity" />
+        <activity android:name=".activity.FindPasswordActivity" />
+        <activity android:name=".activity.NewPasswordActivity" />
+        <activity android:name=".activity.SelectWeekActivity" />
+        <activity android:name=".activity.DeliverListActivity" />
+        <activity android:name=".activity.NewGroupActivity" />
+        <activity android:name=".activity.ContactActivity" />
+        <activity android:name=".activity.FeedBackActivity" />
+        <activity android:name=".activity.PerfectInfoActivity" />
+        <activity android:name=".chat.GroupInfoActivity" />
+        <activity android:name=".activity.ScheduleSettingActivity" />
+        <activity android:name=".activity.BindNfcActivity" />
+        <activity android:name=".activity.ContentListActivity" />
+        <activity android:name=".activity.MyShareActivity" />
+        <activity android:name=".activity.IdentitySelectActivity" />
+        <activity android:name=".activity.WaitActivity" />
+        <activity android:name=".activity.LoginGuideActivity" />
+        <activity android:name=".wechat.activity.WeChatActivity" />
+        <activity android:name=".activity.SortResultActivity" />
+        <activity android:name=".wifi.ClientActivity" />
+        <activity android:name=".activity.AlarmCloseActivity" />
+        <activity android:name=".activity.SingleInfoActivity"/>
+    </application>
+
+</manifest>

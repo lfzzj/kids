@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_hight">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:text="你的名字我的姓氏"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+
+    <ImageView
+        android:id="@+id/list_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/icon_list_more" />
+
+    <CheckBox
+        android:id="@+id/cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:visibility="gone" />
+
+
+    <View
+        style="@style/h_divider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+
+</RelativeLayout>

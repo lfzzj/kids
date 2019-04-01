@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_groupname"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="群聊名称"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_groupName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:drawablePadding="8dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text=""
+            android:textSize="@dimen/textSize_14" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="15dp"
+        android:text="群组成员"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="9dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin" />
+
+    <View style="@style/h_divider_gray" />
+
+    <TextView
+        android:id="@+id/tv_createCode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@drawable/item_click_selector"
+        android:drawableRight="@drawable/icon_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="群二维码"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+    <View
+        style="@style/h_divider"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    <TextView
+        android:id="@+id/tv_clear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@drawable/item_click_selector"
+        android:drawableRight="@drawable/icon_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="删除聊天记录"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+    <View
+        style="@style/h_divider"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    <Button
+        android:id="@+id/btn_dissolvegroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_primary_shape"
+        android:text="删除并解散"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_16" />
+</LinearLayout>

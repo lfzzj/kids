@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.SearchActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <include
+        android:id="@+id/serarch_bar"
+        layout="@layout/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@id/title_bar" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/h_divider"
+        android:layout_below="@id/serarch_bar" />
+
+    <com.hamitao.base_module.customview.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/iv_player"
+        android:layout_below="@id/line" />
+
+    <ImageView
+        android:id="@+id/iv_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/icon_player" />
+
+    <!--<fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard-->
+    <!--android:id="@+id/videoview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:visibility="gone"></fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard>-->
+
+
+    <cn.jzvd.JzvdStd
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <!--<com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer-->
+    <!--android:visibility="gone"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:id="@+id/videoview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"></com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer>-->
+
+
+</RelativeLayout>

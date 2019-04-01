@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.AddCourseActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="选择课表"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_schedule_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="我的课表"
+            android:textColor="@color/text_default_l"
+            android:textSize="@dimen/textSize_16" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="日期时间"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+
+            android:id="@+id/tv_add_course"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/item_click_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="+添加"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>

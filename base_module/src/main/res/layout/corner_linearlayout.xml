@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="87dp"
+    android:layout_marginTop="20dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/icon_sex_boy"
+        android:text="年龄"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="13dp"
+        android:layout_toRightOf="@id/tv_title"
+        android:background="@drawable/bg_gray_round_line"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="0-1岁"
+                android:textColor="@color/text_default_d"
+                android:textSize="@dimen/textSize_14" />
+
+            <View
+                android:background="@color/divider"
+                style="@style/v_divider"
+                android:layout_width="1dp"
+                 />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="1-2岁"
+                android:textColor="@color/text_default_d"
+                android:textSize="@dimen/textSize_14" />
+
+            <View
+                android:background="@color/divider"
+                style="@style/v_divider"
+                android:layout_width="1dp"
+                 />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="2-3岁"
+                android:textColor="@color/text_default_d"
+                android:textSize="@dimen/textSize_14" />
+
+        </LinearLayout>
+
+        <View
+            android:background="@color/divider"
+            android:id="@+id/line"
+            style="@style/h_divider"
+            android:layout_height="1dp"
+             />
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="3-5岁"
+                android:textColor="@color/text_default_d"
+                android:textSize="@dimen/textSize_14" />
+
+            <View
+                android:background="@color/divider"
+                style="@style/v_divider"
+                android:layout_width="1dp"
+                 />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="5-6岁"
+                android:textColor="@color/text_default_d"
+                android:textSize="@dimen/textSize_14" />
+
+            <View
+                android:background="@color/divider"
+                style="@style/v_divider"
+                android:layout_width="1dp"
+                 />
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="6 + 岁"
+                android:textColor="@color/text_default_d"
+                android:textSize="@dimen/textSize_14" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

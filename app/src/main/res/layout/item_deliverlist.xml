@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/item_click_selector"
+    android:layout_height="@dimen/default_item_hight"
+    android:orientation="vertical">
+
+    <TextView
+        android:gravity="center_vertical"
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_toLeftOf="@id/iv_more"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text=""
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/item_click_selector"
+        android:padding="10dp"
+        android:src="@drawable/icon_list_more" />
+
+
+    <View
+        style="@style/h_divider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+</RelativeLayout>

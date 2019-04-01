@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.UserInfoActivity">
+
+    <!--标题-->
+    <include layout="@layout/title_bar" />
+
+    <!--头像-->
+    <RelativeLayout
+        android:id="@+id/rl_face"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="头像"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_face"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_toLeftOf="@id/arrow"
+             />
+
+        <TextView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/icon_arrow_right" />
+    </RelativeLayout>
+
+    <View style="@style/h_divider_gray" />
+
+    <!--昵称-->
+    <RelativeLayout
+        android:id="@+id/rl_nick"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="我的昵称"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/text_default_l"
+            android:textSize="@dimen/textSize_16" />
+
+        <View
+            android:id="@+id/view"
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/view"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="118dp"
+            android:text="宝宝性别"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+    </RelativeLayout>
+
+    <!--账号-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="账号"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawablePadding="10dp"
+            android:text="13690003332"
+            android:textColor="@color/text_default_l"
+            android:textSize="@dimen/textSize_16" />
+
+    </RelativeLayout>
+
+    <View style="@style/h_divider_gray" />
+
+    <!--宝宝名字-->
+    <RelativeLayout
+        android:id="@+id/rl_bbName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="宝宝名字"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_bbName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:textSize="@dimen/textSize_16" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </RelativeLayout>
+
+    <!--宝宝性别-->
+    <RelativeLayout
+        android:id="@+id/rl_bbSex"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="宝宝性别"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_bbSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:gravity="center"
+            android:text="小王子"
+            android:textColor="@color/text_default_l"
+            android:textSize="@dimen/textSize_16" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </RelativeLayout>
+
+
+    <!--宝宝生日-->
+    <RelativeLayout
+        android:id="@+id/rl_bbBirth"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="宝宝生日"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:textSize="@dimen/textSize_16" />
+
+    </RelativeLayout>
+
+    <View style="@style/h_divider_gray" />
+
+    <!--退出登录-->
+    <RelativeLayout
+        android:id="@+id/rl_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="退出当前用户"
+            android:textColor="@color/text_default_d"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

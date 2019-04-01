@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text=""
+        android:textColor="@color/text_default_l"
+        android:textSize="@dimen/textSize_12" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/tv_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_gary_shape"
+        android:gravity="center_vertical">
+
+        <com.hamitao.base_module.customview.RoundCornerImageView
+            android:id="@+id/iv_face"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="13dp"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_contentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <ImageView
+            android:id="@+id/iv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_likeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/ll_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/iv_delete"
+        android:drawableLeft="@drawable/icon_share_like_n"
+        android:drawablePadding="3dp"
+        android:text="0" />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/ll_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_share_delete" />
+
+
+    <View
+        style="@style/h_divider"
+        android:layout_below="@id/iv_delete" />
+
+
+</RelativeLayout>

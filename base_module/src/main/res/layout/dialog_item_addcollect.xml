@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/dialog_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBaseline="@+id/dialog_list_more"
+            android:layout_alignBottom="@+id/dialog_list_more"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:text="加入到收藏夹"
+            android:textColor="@color/text_default_l"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="歌单 (3)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSize_16"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dialog_list_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/item_click_selector"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/text_default_d"
+            android:textSize="16sp" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_close"
+        android:layout_below="@id/rl"></android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View style="@style/h_divider" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/item_click_selector"
+            android:gravity="center"
+            android:text="关闭"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+    </LinearLayout>
+
+</RelativeLayout>

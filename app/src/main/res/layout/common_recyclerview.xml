@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fadingEdge="none"
+            android:scrollbars="none" />
+
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_collect_none" />
+
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/tv_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/text_default_l"
+            android:textSize="@dimen/textSize_16" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_recommend_tips" />
+
+    <RelativeLayout
+        android:id="@+id/rl_content1"
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+
+        <com.hamitao.base_module.customview.RoundCornerImageView
+            android:id="@+id/iv_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_cover" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_info"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/iv_img"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="儿童安全常识"
+                android:textColor="@color/text_default_d"
+                android:textSize="@dimen/textSize_16" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:text="安全常识我知道"
+                android:textColor="@color/text_default_l"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line1"
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/iv_img" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_content2"
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+
+        <com.hamitao.base_module.customview.RoundCornerImageView
+            android:id="@+id/iv_img2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_cover" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_info"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/iv_img2"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="《三字经》"
+                android:textColor="@color/text_default_d"
+                android:textSize="@dimen/textSize_16" />
+
+            <TextView
+                android:id="@+id/tv_content2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text=""
+                android:textColor="@color/text_default_l"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line2"
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/iv_img2" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_content3"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginBottom="5dp">
+
+        <com.hamitao.base_module.customview.RoundCornerImageView
+            android:id="@+id/iv_img3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_cover" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_info"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/iv_img3"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="《论语》"
+                android:textColor="@color/text_default_d"
+                android:textSize="@dimen/textSize_16" />
+
+            <TextView
+                android:id="@+id/tv_content3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text=""
+                android:textColor="@color/text_default_l"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/rl_content3"
+        style="@style/h_divider" />
+
+</LinearLayout>

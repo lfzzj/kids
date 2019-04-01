@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="item_emoticon_size_big">60dp</dimen>
+</resources>

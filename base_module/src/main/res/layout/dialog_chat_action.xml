@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_videochat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_click_selector"
+        android:gravity="center"
+        android:text="视频通话"
+        android:textColor="@color/text_default_d"
+        android:textSize="16sp" />
+
+    <View style="@style/h_divider" />
+
+    <TextView
+        android:id="@+id/tv_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_click_selector"
+        android:gravity="center"
+        android:text="视频监控"
+        android:textColor="@color/text_default_d"
+        android:textSize="16sp" />
+
+    <View style="@style/h_divider" />
+
+    <TextView
+        android:id="@+id/tv_voicechat"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_click_selector"
+        android:gravity="center"
+        android:text="语音通话"
+        android:textColor="@color/text_default_d"
+        android:textSize="16sp" />
+
+    <View style="@style/h_divider" />
+
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/item_click_selector"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/text_default_d"
+        android:textSize="16sp" />
+
+</LinearLayout>

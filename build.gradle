@@ -1,0 +1,45 @@
+ // Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()//添加存储库
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+
+
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+
+ext {
+    minSdkVersion = 19
+    targetSdkVersion = 25  //高于26，则通知栏失效，需要配置
+    compileSdkVersion = 26
+    buildToolsVersion = '27.0.2'
+    supportVersion = "27.1.1"
+
+//    cusAppId = 'com.hamitao.kids'
+//    cusVersionName = '1.1.0'
+//    cusVersionCode = 3
+//    cusAppName = "小淘同学" //自定义APP名称
+}

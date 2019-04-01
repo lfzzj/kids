@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_hight">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_header"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:src="@drawable/default_cover"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_16"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/iv_header"
+        android:ellipsize="end"
+        android:gravity="center_vertical|left"
+        android:lines="1"
+        android:text=""
+        android:textColor="@color/text_default_d"
+        android:layout_toLeftOf="@id/list_more"
+        android:textSize="@dimen/textSize_16" />
+
+    <ImageView
+        android:id="@+id/list_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/item_click_selector"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:src="@drawable/icon_list_more"
+        android:visibility="visible" />
+
+    <View
+        style="@style/h_divider"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+
+</RelativeLayout>

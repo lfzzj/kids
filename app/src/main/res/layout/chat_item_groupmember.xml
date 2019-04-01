@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingRight="15dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_face"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/icon_head_default" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="周杰伦"
+        android:textColor="@color/text_default_d"
+        android:textSize="@dimen/textSize_14" />
+
+</LinearLayout>

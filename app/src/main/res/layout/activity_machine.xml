@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.MachineActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/item_click_selector"
+            android:drawableLeft="@drawable/icon_back"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="15dp"
+            android:src="@drawable/icon_add"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+        <RadioGroup
+            android:visibility="gone"
+            android:id="@+id/rg_machine_add"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_hight"
+            android:orientation="horizontal"></RadioGroup>
+
+
+    <View style="@style/h_divider" />
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                //机器人状态
+
+                <RelativeLayout
+                    android:id="@+id/rl_machine_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="机器人状态"
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_machine_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="无"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+                //电量
+
+                <RelativeLayout
+                    android:id="@+id/rl_machine_electric"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:text="电量"
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_electric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:text="无"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                //信号
+
+                <RelativeLayout
+                    android:id="@+id/rl_machine_signal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:text="信号"
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16" />
+
+
+                    <TextView
+                        android:id="@+id/tv_signal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:text="极弱"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                //wifi
+
+                <RelativeLayout
+                    android:id="@+id/rl_machine_wifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight">
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:text="网络"
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_wifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/icon_arrow_right"
+                        android:text=""
+                        android:textColor="@color/text_default_l"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_alarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:background="@drawable/item_click_selector"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="闹钟"
+                    android:textColor="@color/text_default_d"
+                    android:textSize="@dimen/textSize_16" />
+
+                <View style="@style/h_divider" />
+
+                <TextView
+                    android:id="@+id/tv_deliver_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:background="@drawable/item_click_selector"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="投送机器人清单"
+                    android:textColor="@color/text_default_d"
+                    android:textSize="@dimen/textSize_16" />
+
+                <View style="@style/h_divider" />
+
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:background="@drawable/item_click_selector"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="机器人电话本"
+                    android:textColor="@color/text_default_d"
+                    android:textSize="@dimen/textSize_16" />
+
+                <View style="@style/h_divider" />
+
+                <TextView
+                    android:id="@+id/tv_bind"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:background="@drawable/item_click_selector"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="绑定号码"
+                    android:textColor="@color/text_default_d"
+                    android:textSize="@dimen/textSize_16" />
+
+                <View style="@style/h_divider_gray" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:gravity="center"
+                    android:text="远程控制"
+                    android:textColor="@color/text_default_d"
+                    android:textStyle="bold" />
+
+                <View style="@style/h_divider" />
+
+                <!--开关机-->
+                <RelativeLayout
+                    android:id="@+id/rl_machine_isOpen"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="开机"
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <ImageView
+                        android:id="@+id/iv_machine_isOpen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/switch_selector"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+
+
+                </RelativeLayout>
+
+                <!--播放-->
+                <RelativeLayout
+                    android:id="@+id/rl_machine_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="播放"
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <ImageView
+                        android:id="@+id/iv_machine_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/icon_machine_start" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <!--定时关闭-->
+                <RelativeLayout
+                    android:id="@+id/rl_machine_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:background="@drawable/item_click_selector">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:text="定时关闭"
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:drawableRight="@drawable/icon_arrow_right" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_machine_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:background="@drawable/item_click_selector"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="定位"
+                    android:textColor="@color/text_default_d"
+                    android:textSize="@dimen/textSize_16" />
+
+                <View style="@style/h_divider" />
+
+                <TextView
+                    android:id="@+id/tv_machine_wechat"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:background="@drawable/item_click_selector"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="聊天"
+                    android:textColor="@color/text_default_d"
+                    android:textSize="@dimen/textSize_16" />
+
+                <View style="@style/h_divider" />
+
+
+                <TextView
+                    android:id="@+id/tv_machine_habit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:background="@drawable/item_click_selector"
+                    android:drawableRight="@drawable/icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="习惯培养"
+                    android:textColor="@color/text_default_d"
+                    android:textSize="@dimen/textSize_16" />
+
+                <View style="@style/h_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_machine_protectEye"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="护眼提醒"
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <ImageView
+                        android:id="@+id/iv_machine_protectEye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/switch_selector"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_machine_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:gravity="center_vertical"
+                        android:text="电话接听管理"
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16" />
+
+                    <ImageView
+                        android:id="@+id/iv_machine_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:background="@drawable/switch_selector"
+                        android:gravity="center_vertical" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_machine_unbind"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_primary_shape"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="解绑机器人"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_16" />
+            </LinearLayout>
+        </ScrollView>
+
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+
+</LinearLayout>

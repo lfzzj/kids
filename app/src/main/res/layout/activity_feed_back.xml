@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+
+    tools:context="com.hamitao.kids.activity.FeedBackActivity">
+
+
+    <include layout="@layout/title_bar" />
+
+
+    <EditText
+        android:id="@+id/et_contact"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/bg_corner22_white_shape"
+        android:hint="请留下您的联系方式（手机号或邮箱）"
+        android:maxLength="13"
+        android:paddingLeft="15dp"
+        android:lines="1"
+        android:textSize="@dimen/textSize_14" />
+
+
+    <EditText
+        android:id="@+id/et_advice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="20dp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/bg_corner22_white_shape"
+        android:gravity="start"
+        android:hint="请输入您的意见或建议，感谢。"
+        android:lines="10"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp"
+        android:textSize="@dimen/textSize_14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/btn_coner20_gray_shape"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/btn_confirm"
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/btn_primary_shape"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_16" />
+    </LinearLayout>
+
+
+</LinearLayout>

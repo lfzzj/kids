@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/smart_tree"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="6dp"
+            android:src="@drawable/icon_hmeet"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/sort"
+            android:layout_toRightOf="@id/smart_tree"
+            android:background="@drawable/bg_search_bar">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/icon_search" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@id/tv_search"
+                android:layout_toRightOf="@id/iv_search"
+                android:background="@null"
+                android:hint=""
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="6dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/icon_scan"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sort"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/titlebar_click_selector"
+            android:drawableTop="@drawable/icon_sort"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="分类"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <include layout="@layout/common_recyclerview" />
+
+</LinearLayout>

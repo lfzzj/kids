@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.PerfectInfoActivity">
+
+
+    <include layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="114dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_set_face"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/icon_avarta_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_set_face"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="7dp"
+            android:text="设置头像"
+            android:textColor="@color/text_default_l" />
+
+    </RelativeLayout>
+
+
+    <View style="@style/h_divider_gray" />
+
+    <RelativeLayout
+        android:id="@+id/rl_nick"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="我的昵称"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/text_default_d" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_account"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="用户账号"
+            android:textColor="@color/text_default_l"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_default_d" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bbName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="宝宝名字"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_bbName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_default_d" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </RelativeLayout>
+
+    <!--宝宝性别-->
+    <RelativeLayout
+        android:id="@+id/rl_bbSex"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="宝宝性别"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:text="男孩"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/rb_boy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/cb_check_selector"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="小王子" />
+
+            <RadioButton
+                android:id="@+id/rb_girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/cb_check_selector"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="小公主" />
+        </RadioGroup>
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_bbBirthday"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="宝宝生日"
+            android:textColor="@color/text_default_d"
+            android:textSize="@dimen/textSize_16" />
+
+        <TextView
+            android:id="@+id/tv_bbBirthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_default_d" />
+
+        <View
+            style="@style/h_divider"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

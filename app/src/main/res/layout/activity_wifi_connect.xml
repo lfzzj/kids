@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hamitao.kids.activity.WifiConnectActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_ssid"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight">
+
+                    <TextView
+                        android:textSize="@dimen/textSize_16"
+                        android:textColor="@color/text_default_d"
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:text="WIFI:" />
+
+                    <EditText
+                        android:id="@+id/et_ssid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/tv"
+                        android:background="@null"
+                        android:hint="请输入wifi账号" />
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_psw"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_hight"
+                    android:layout_below="@id/rl_ssid">
+
+                    <TextView
+                        android:textColor="@color/text_default_d"
+                        android:textSize="@dimen/textSize_16"
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:text="密码:" />
+
+                    <EditText
+                        android:id="@+id/et_ssid_psw"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/tv1"
+                        android:background="@null"
+                        android:hint="请输入wifi密码"
+                        android:inputType="textPassword" />
+
+                    <CheckBox
+                        android:id="@+id/cb_show_psw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/cb_check_selector"
+                        android:drawablePadding="8dp"
+                        android:text="显示密码" />
+
+
+                    <View
+                        style="@style/h_divider"
+                        android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_code"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_psw"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="clip_horizontal"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/btn_primary_shape"
+                    android:text="生成二维码"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_20" />
+
+                <ImageView
+                    android:id="@+id/iv_code"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/btn_code"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="62dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_code"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="18dp"
+                    android:text="机器人扫码连接网络"
+                    android:textColor="@color/text_default_l"
+                    android:textSize="@dimen/textSize_16"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View style="@style/h_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:background="@color/activity_background"
+        android:orientation="horizontal">
+
+        <!-- 语音/文字切换-->
+        <ImageView
+            android:id="@+id/btn_voice_or_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@drawable/icon_chat_voice" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@+id/iv_video"
+            android:layout_toRightOf="@+id/btn_voice_or_text"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <!--输入框-->
+            <com.hamitao.kids.wechat.view.EmoticonsEditText
+                android:id="@+id/et_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/btn_send"
+                android:background="@drawable/bg_search_bar"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="4dp"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textSize="16sp" />
+
+            <!--发送-->
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/btn_primary_shape"
+                android:text="发送"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/icon_chat_video"
+            android:visibility="visible" />
+
+
+        <!--语音输入-->
+        <com.hamitao.kids.wechat.view.RecordVoiceButton
+            android:id="@+id/btn_voice"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@+id/iv_video"
+            android:layout_toRightOf="@+id/btn_voice_or_text"
+            android:background="@drawable/bg_input_shape"
+            android:text="按住 录音"
+            android:textColor="#727272"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_multi_and_send"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <!--表情-->
+            <ImageView
+                android:id="@+id/btn_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:src="@drawable/jmui_fetch_failed"
+                android:visibility="gone" />
+
+            <!--apps 功能-->
+            <ImageView
+                android:id="@+id/btn_multimedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/icon_add" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.hamitao.kids.wechat.view.FuncLayout
+        android:id="@+id/ly_kvml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</LinearLayout>

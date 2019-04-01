@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/activity_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="定时"
+        android:textColor="@color/text_default_d"
+        android:textSize="16sp" />
+
+    <View style="@style/h_divider" />
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_check_selector"
+            android:drawablePadding="10dp"
+            android:text="无" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_check_selector"
+            android:drawablePadding="10dp"
+            android:text="15分钟" />
+
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_check_selector"
+            android:drawablePadding="10dp"
+            android:text="30分钟" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_check_selector"
+            android:drawablePadding="10dp"
+            android:text="40分钟" />
+
+        <RadioButton
+            android:id="@+id/rb5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_check_selector"
+            android:drawablePadding="10dp"
+            android:text="50分钟" />
+
+        <RadioButton
+            android:id="@+id/rb6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_check_selector"
+            android:drawablePadding="10dp"
+            android:text="60分钟" />
+
+
+    </RadioGroup>
+
+    <View style="@style/h_divider" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_click_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_default_l" />
+
+        <View
+            style="@style/v_divider"
+            android:layout_width="0.5dp" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_click_selector"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/text_default_l" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

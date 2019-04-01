@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    tools:context="com.hamitao.kids.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tab_bottom"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_above="@id/tab_bottom"
+        android:background="#fdcb98"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="熏教机已待机，电量%50，点击开机"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+    <View
+        style="@style/h_divider"
+        android:layout_above="@id/tab_bottom" />
+
+    <LinearLayout
+        android:id="@+id/tab_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+
+        <LinearLayout
+            android:id="@+id/tab_recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_recommend"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_recommand_p" />
+
+            <TextView
+                android:id="@+id/tv_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="25dp">
+
+                <ImageView
+                    android:id="@+id/iv_wechat"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_wechat_n" />
+
+                <TextView
+                    android:id="@+id/tv_unread_num"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/unread_read_point"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="8sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="聊天"
+                android:textColor="@color/text_default_d"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/tab_square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_square"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_square_n" />
+
+            <TextView
+                android:id="@+id/tv_square"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="广场"
+                android:textColor="@color/text_default_d"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_me"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_me_n" />
+
+            <TextView
+                android:id="@+id/tv_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的"
+                android:textColor="@color/text_default_d"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/music"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/icon_player" />
+
+
+    <include
+        layout="@layout/dialog_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

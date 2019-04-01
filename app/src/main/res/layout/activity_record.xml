@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    tools:context="com.hamitao.kids.activity.RecordActivity">
+
+
+    <include layout="@layout/title_bar" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/btn_startRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_record_start" />
+
+
+        <TextView
+            android:id="@+id/tv_audition"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@id/btn_startRecord"
+            android:background="@drawable/bg_record_n"
+            android:gravity="center"
+            android:text="试听"
+            android:textColor="@color/text_default_d"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_saveRecord"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/btn_startRecord"
+            android:background="@drawable/bg_record_p"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/text_default_d"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_startRecord"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bg_record_tips"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="推荐使用耳机录音"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_tips"
+                android:src="@drawable/icon_record_cancle" />
+        </LinearLayout>
+
+        <Chronometer
+            android:id="@+id/tv_recordTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_startRecord"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="8dp"
+            android:format="%s"
+            android:textSize="28sp" />
+
+        <Chronometer
+            android:id="@+id/tv_playTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_recordTime"
+            android:layout_centerInParent="true"
+            android:format="%s"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

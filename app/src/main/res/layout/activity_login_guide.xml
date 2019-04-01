@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_guide"
+    tools:context="com.hamitao.kids.activity.LoginGuideActivity">
+
+    <Button
+        android:layout_centerInParent="true"
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:layout_above="@id/btn_register"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/btn_primary_shape"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_16" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_hight"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_white_shape"
+        android:text="注册"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/textSize_16" />
+
+</RelativeLayout>

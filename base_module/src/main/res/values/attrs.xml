@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="ChatImageView">
+        <attr name="chat_image_mask" format="reference" />
+    </declare-styleable>
+
+
+    <!--MenuItemView-->
+
+    <declare-styleable name="MenuItemView">
+        <!-- 基本的参数设置-->
+        <attr name="headerDrawable" format="reference" />
+        //头部图标
+        <attr name="headerSize" format="dimension" />
+        //图标大小
+        <attr name="drawPadding" format="dimension" />
+        //图标与文字距离
+        <attr name="textHeader" format="string" />
+        //头部文字
+        <attr name="textColor" format="color" />
+        //头部文字颜色
+        <attr name="textSize" format="dimension" />
+        //头部文字大小
+        <attr name="arrowDrawable" format="reference" />
+        //箭头图标
+        <attr name="arrowSize" format="dimension" />
+        //箭头大小
+        <attr name="arrowColor" format="color" />
+        //箭头颜色
+        <attr name="itemType" format="enum">//item类型
+            <enum name="normalType" value="0" />
+            <enum name="arrowType" value="1" />
+            <enum name="toggleType" value="2" />
+        </attr>
+        <!-- 当类型为switch时，绘制switch用到的参数-->
+        <attr name="toggleWidth" format="dimension" />
+        //开关宽度
+        <attr name="toggleHeight" format="dimension" />
+        //快关高度
+        <attr name="bordeWidth" format="dimension" />
+        //边界宽度
+        <attr name="areaColor" format="color" />
+        //开关颜色
+        <attr name="offColor" format="color" />
+        //关闭时的颜色
+        <attr name="onColor" format="color" />
+        //打开时的颜色
+        <attr name="handlerColor" format="color" />
+        //滑动把的颜色
+        <attr name="animate" format="boolean" />
+        //动画
+        <attr name="defaultOn" format="boolean" />
+        //默认打开
+        <!-- 下分割线的绘制属性 -->
+        <attr name="dividerr" format="reference|color" />
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="dividerVisibilty" format="boolean" />
+    </declare-styleable>
+
+    <!--MenuItemView-->
+
+</resources>

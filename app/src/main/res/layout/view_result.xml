@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_single"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_color_selector"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="单曲"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="15sp" />
+
+
+        <RadioButton
+            android:id="@+id/rb_album"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_color_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:text="专辑"
+            android:textColor="@drawable/text_color_selector"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <View style="@style/h_divider" />
+
+
+    <include layout="@layout/common_recyclerview" />
+
+</LinearLayout>

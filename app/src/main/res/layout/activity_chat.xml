@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/titlebar_click_selector"
+            android:drawableLeft="@drawable/icon_back"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="12dp"
+            android:src="@drawable/icon_chat_mygroup"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_14"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <!--<cn.jiguang.imui.messages.ptr.PullToRefreshLayout
+        android:id="@+id/pull_to_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/input_view"
+        android:layout_below="@id/title_bar"
+        app:PtrCloseDuration="300"
+        app:PtrCloseHeaderDuration="2000"
+        app:PtrKeepHeaderWhenRefresh="true"
+        app:PtrPullToRefresh="true"
+        app:PtrRatioHeightToRefresh="1.2"
+        app:PtrResistance="1.2">
+
+        <cn.jiguang.imui.messages.MessageList
+            android:id="@+id/msg_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            app:avatarHeight="40dp"
+            app:avatarRadius="50dp"
+            app:avatarWidth="40dp"
+            app:bubbleMaxWidth="0.70"
+            app:dateTextSize="@dimen/textSize_12"
+            app:receiveBubbleColor="@color/colorPrimary"
+            app:receiveBubblePaddingLeft="16dp"
+            app:receiveBubblePaddingRight="8dp"
+            app:receiveTextColor="@color/white"
+            app:receiveTextSize="@dimen/textSize_14"
+            app:sendBubbleColor="#bcecfd"
+            app:sendBubblePaddingLeft="8dp"
+            app:sendBubblePaddingRight="16dp"
+            app:sendTextColor="@color/text_default_d"
+            app:sendTextSize="@dimen/textSize_14" />
+    </cn.jiguang.imui.messages.ptr.PullToRefreshLayout>-->
+
+
+    <include
+        android:id="@+id/input_view"
+        layout="@layout/layout_input_view"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_hight"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/titlebar_click_selector"
+        android:drawableLeft="@drawable/icon_back"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_14"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

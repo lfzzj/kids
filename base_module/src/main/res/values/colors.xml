@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff7781</color>
+    <color name="colorPrimaryDark">#943a03</color>
+    <color name="colorAccent">#ff7781</color>
+
+    <!-- 主题色 -->
+    <color name="theme_n">#ff7263</color>
+    <!-- 主题色反应色 -->
+    <color name="theme_p">#e56859</color>
+    <!-- 主题色不可点击色 -->
+    <color name="theme_unable">#ff8b6a</color>
+
+
+    <!-- 按钮通用颜色 -->
+    <color name="btn_default_color_n">#252525</color>
+    <color name="btn_default_color_p">#515151</color>
+    <color name="btn_default_color_unable">#7f7f7e</color>
+
+    <!-- 界面背景色 -->
+    <!--    <color name="activity_background">#fdfdfe</color>-->
+    <color name="activity_background">#ffffff</color>
+
+    <!-- 标题背景色 -->
+    <color name="title_backgroud">#1A1428</color>
+    <!--分割线颜色-->
+    <color name="un_select">#b7b7b7</color>
+    <color name="divider">#eeeff0</color>
+    <color name="divider_light">#e4e3e3</color>
+    <color name="white_bg_divider">#FFe5e5e5</color>
+    <!-- 白色及其反映色-->
+    <color name="white">#ffffff</color>
+    <color name="white_p">#e5e5e5</color>
+
+    <!-- 男性颜色 -->
+    <color name="sex_boy">#32bcde</color>
+    <!-- 女性颜色 -->
+    <color name="sex_girl">#ff3485</color>
+
+    <color name="gray">#949393</color>
+    <color name="coin">#ff885e</color>
+    <!-- 红色及其反映色-->
+    <color name="red">#ec3643</color>
+    <color name="red_p">#f33e3e</color>
+    <!-- 主要字体色 -->
+    <color name="text_default_d">#191919</color>
+    <color name="text_default_d_p">#4E4E4E</color>
+    <color name="text_default_l">#757575</color>
+    <color name="text_default_l_p">#ADADAD</color>
+    <color name="text_default_unable">#bcbcbc</color>
+    <color name="text_dark">#333333</color>
+
+    <color name="sex_male">#2673FF</color>
+    <color name="sex_female">#ff65a6</color>
+
+    <color name="gift_nick_color">#ff628b</color>
+
+    <color name="c_df">#dfdfdf</color>
+
+    <!-- 房间tag背景 -->
+    <color name="room_tag_check_text">#ffffff</color>
+    <color name="room_tag_text">#333333</color>
+    <color name="room_tag_check_text_c">#333333</color>
+    <color name="room_tag_text_c">#ffffff</color>
+
+    各种选择框选中透明底色
+    <color name="chose_dialog_selected_color">#9633c8ff</color>
+    <!-- 对话框 -->
+    <color name="alertdialog_line">#ebebec</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#ba4cf2</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+
+    <!-- 通用颜色 -->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_p">#ffedeeef</color>
+    <color name="titlebar_transparent_p">#ff943a03</color>
+    <color name="bg_transparent_p">#ff130e0a</color>
+
+    <color name="black">#000000</color>
+    <color name="black_n">#5D5D5D</color>
+    <color name="black_p">#4d4d4d</color>
+
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_hight"
+    android:background="@drawable/item_click_selector">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:src="@drawable/icon_device_logo" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_toRightOf="@id/iv_img"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/iv_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:src="@drawable/icon_switch_n" />
+
+    <View
+        style="@style/h_divider"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
